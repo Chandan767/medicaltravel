@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical & Travel Expense Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            width: 100%;
+            
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        
+        .logo-container {
+            width: 150px; 
+        }
+        
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .header-address {
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .claim-info {
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 10px;
+            text-align: right;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
+        
+        .privacy-notice {
+            margin-top: 15px;
+            font-size: 10px;
+        }
+        
+        .checkbox {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #333;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        
+        .checked {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="form-container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="im/Screenshot 2025-04-17 000053.png" alt="WCB Logo">
+            </div>
+            <div class="header-address">
+                333 Broadway<br>
+                Winnipeg, MB R3C 4W3<br>
+                Phone: (204) 954-4321<br>
+                Toll Free: 1-855-954-4321<br>
+                wcb.mb.ca
+            </div>
+            
+        </div>
+        
+        <div class="title">Medical & Travel Expense Request</div>
+        
+        <div class="claim-info">
+            Claim No. <span id="claim-number">20042047</span><br>
+            <span id="worker-name">Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:
+        </div>
+        
+        <h3>Prescription Drugs</h3>
+        <table id="prescription-drugs">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Prescription Date</th>
+                    <th>Date Purchased</th>
+                    <th>Healthcare Provider Name</th>
+                    <th>Paid Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+        <h3>Over-the-Counter Drugs</h3>
+        <table id="otc-drugs">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Date Purchased</th>
+                    <th>Paid Amount</th>
+                    <th>Seller's Name</th>
+                    <th>Reason for Purchasing</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+        <h3>Bandages, Braces or Other Medical Supplies</h3>
+        <table id="medical-supplies">
+            <thead>
+                <tr>
+                    <th>Item Purchased</th>
+                    <th>Date Purchased</th>
+                    <th>Was this Prescribed?</th>
+                    <th>Healthcare Provider Name</th>
+                    <th>Paid Amount</th>
+                    <th>Seller's Name</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+        <h3>Parking for Medical Appointments</h3>
+        <table id="parking">
+            <thead>
+                <tr>
+                    <th>Address of Healthcare Provider/Medical Facility</th>
+                    <th>Date</th>
+                    <th>Paid Amount</th>
+                    <th>Meter Used?</th>
+                    <th>Meter Number</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+        <h3>Village to Medical Appointments</h3>
+        <p>The WCB will generally reimburse only those transportation costs which are in excess of costs that would be incurred by the worker while travelling to and from work.</p>
+        <table id="village-transport">
+            <thead>
+                <tr>
+                    <th>Appointment Date</th>
+                    <th>Address of Healthcare Provider/Medical Facility</th>
+                    <th>Address of Workplace</th>
+                    <th>Number of km (Round Trip)</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            Worker App ID: <span id="worker-id1">712041</span> Submitted: <span id="submission-date1">March 28, 2024 20:43</span> Page 1 of 2
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <div class="header">
+            <div class="header-address">
+                333 Broadway<br>
+                Winnipeg, MB R3C 4W3<br>
+                Phone: (204) 954-4321<br>
+                Toll Free: 1-855-954-4321<br>
+                wcb.mb.ca
+            </div>
+        </div>
+        
+        <h3>Bus or Taxi Fare for Medical Appointments*</h3>
+        <p>*Note: Pre-approval is required from your WCB representative to claim taxi fare(s).</p>
+        <table id="bus-taxi">
+            <thead>
+                <tr>
+                    <th>Appointment Date</th>
+                    <th>Address of Starting Point</th>
+                    <th>Address of Healthcare Provider/Medical Facility</th>
+                    <th>Bus or Taxi (indicate one)</th>
+                    <th>Total Fare Paid</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        
+        <div class="privacy-notice">
+            <span class="checkbox checked"></span> I understand that the Privacy Notice applies to the personal information collected in this document.
+        </div>
+        
+        <div class="footer">
+            Worker App ID: <span id="worker-id2">712041</span><br>
+            Submitted: <span id="submission-date2">March 28, 2025 20:43</span><br>
+            Page 2 of 2
+        </div>
+    </div>
+
+    <script>
+        const formData = {
+            claimNumber: "20042047",
+            workerName: "Madeleine Willson",
+            workerId: "712041",
+            submissionDate: "March 28, 2024 20:43",
+            prescriptionDrugs: [
+                {
+                    drugName: "Naproxen",
+                    prescriptionDate: "February 28, 2024",
+                    purchaseDate: "February 29, 2024",
+                    providerName: "Dr. Best",
+                    amount: "$20.00"
+                }
+            ],
+            otcDrugs: [
+                {
+                    drugName: "Advil",
+                    purchaseDate: "March 28, 2024",
+                    amount: "$8.00",
+                    sellerName: "Shoppers Drug Mart",
+                    reason: "Pain"
+                }
+            ],
+            medicalSupplies: [
+                {
+                    item: "Tensor",
+                    purchaseDate: "February 28, 2024",
+                    prescribed: "Yes",
+                    providerName: "Dr. Best",
+                    amount: "$10.00",
+                    sellerName: "Shoppers DrugMart"
+                }
+            ],
+            parking: [
+                {
+                    address: "333 St Mary Ave, Winnipeg MB R3CA45, Canada",
+                    date: "March 28, 2024",
+                    amount: "$10.00",
+                    meterUsed: "yes",
+                    meterNumber: "12245"
+                }
+            ],
+            villageTransport: [
+                {
+                    date: "March 28, 2024",
+                    providerAddress: "HSC, 820 Sherbrook St, Winnipeg MB R3A 1R9, Canada",
+                    workplaceAddress: "WCB, 333 Broadway, Winnipeg MB R3C 4W3,Canada",
+                    distance: "20 km"
+                }
+            ],
+            busTaxi: [
+                {
+                    date: "March 28, 2024",
+                    startAddress: "",
+                    destinationAddress: "HSC Winnipeg Women's Hospital, 665 William Ave, Winnipeg MB R3B oZ2, Canada",
+                    transportType: "Bus",
+                    fare: "$3.00"
+                },
+                {
+                    date: "March 27, 2024",
+                    startAddress: "25 Furby St, Winnipeg MB R3C2A2, Canada",
+                    destinationAddress: "440 Edmonton St, Winnipeg MB R3B 2M4, Canada",
+                    transportType: "Taxi",
+                    fare: "$15.00"
+                }
+            ]
+        };
+        const altFormData = {
+            claimNumber: "20042048",
+            workerName: "John Smith",
+            workerId: "712042",
+            submissionDate: "April 15, 2024 14:30",
+            prescriptionDrugs: [
+                {
+                    drugName: "Amoxicillin",
+                    prescriptionDate: "April 1, 2024",
+                    purchaseDate: "April 2, 2024",
+                    providerName: "Dr. Good",
+                    amount: "$25.00"
+                },
+                {
+                    drugName: "Lisinopril",
+                    prescriptionDate: "April 5, 2024",
+                    purchaseDate: "April 6, 2024",
+                    providerName: "Dr. Good",
+                    amount: "$18.50"
+                }
+            ],
+            otcDrugs: [
+                {
+                    drugName: "Tylenol",
+                    purchaseDate: "April 10, 2024",
+                    amount: "$9.50",
+                    sellerName: "Walmart Pharmacy",
+                    reason: "Headache"
+                },
+                {
+                    drugName: "Pepto-Bismol",
+                    purchaseDate: "April 12, 2024",
+                    amount: "$7.25",
+                    sellerName: "Shoppers Drug Mart",
+                    reason: "Upset stomach"
+                }
+            ],
+            medicalSupplies: [
+                {
+                    item: "Knee brace",
+                    purchaseDate: "April 3, 2024",
+                    prescribed: "Yes",
+                    providerName: "Dr. Good",
+                    amount: "$35.00",
+                    sellerName: "Medical Supplies Inc."
+                },
+                {
+                    item: "Bandages",
+                    purchaseDate: "April 8, 2024",
+                    prescribed: "No",
+                    providerName: "",
+                    amount: "$5.99",
+                    sellerName: "Shoppers DrugMart"
+                }
+            ],
+            parking: [
+                {
+                    address: "123 Health St, Winnipeg MB R3B 1A1, Canada",
+                    date: "April 5, 2024",
+                    amount: "$12.00",
+                    meterUsed: "yes",
+                    meterNumber: "54321"
+                },
+                {
+                    address: "456 Care Ave, Winnipeg MB R3C 2B2, Canada",
+                    date: "April 10, 2024",
+                    amount: "$8.00",
+                    meterUsed: "no",
+                    meterNumber: ""
+                }
+            ],
+            villageTransport: [
+                {
+                    date: "April 5, 2024",
+                    providerAddress: "123 Health St, Winnipeg MB R3B 1A1, Canada",
+                    workplaceAddress: "789 Office Rd, Winnipeg MB R3D 3C3, Canada",
+                    distance: "15 km"
+                },
+                {
+                    date: "April 10, 2024",
+                    providerAddress: "456 Care Ave, Winnipeg MB R3C 2B2, Canada",
+                    workplaceAddress: "789 Office Rd, Winnipeg MB R3D 3C3, Canada",
+                    distance: "10 km"
+                }
+            ],
+            busTaxi: [
+                {
+                    date: "April 5, 2024",
+                    startAddress: "100 Home St, Winnipeg MB R3A 1B1, Canada",
+                    destinationAddress: "123 Health St, Winnipeg MB R3B 1A1, Canada",
+                    transportType: "Bus",
+                    fare: "$2.50"
+                },
+                {
+                    date: "April 12, 2024",
+                    startAddress: "100 Home St, Winnipeg MB R3A 1B1, Canada",
+                    destinationAddress: "456 Care Ave, Winnipeg MB R3C 2B2, Canada",
+                    transportType: "Taxi",
+                    fare: "$18.00"
+                }
+            ]
+        };
+
+        function populateForm(data) {
+            document.getElementById('claim-number').textContent = data.claimNumber;
+            document.getElementById('worker-name').textContent = data.workerName;
+            document.getElementById('worker-id1').textContent = data.workerId;
+            document.getElementById('worker-id2').textContent = data.workerId;
+            document.getElementById('submission-date1').textContent = data.submissionDate;
+            document.getElementById('submission-date2').textContent = data.submissionDate;
+            const prescriptionTable = document.querySelector('#prescription-drugs tbody');
+            prescriptionTable.innerHTML = '';
+            data.prescriptionDrugs.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.drugName}</td>
+                    <td>${item.prescriptionDate}</td>
+                    <td>${item.purchaseDate}</td>
+                    <td>${item.providerName}</td>
+                    <td>${item.amount}</td>
+                `;
+                prescriptionTable.appendChild(row);
+            });
+        
+            const otcTable = document.querySelector('#otc-drugs tbody');
+            otcTable.innerHTML = '';
+            data.otcDrugs.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.drugName}</td>
+                    <td>${item.purchaseDate}</td>
+                    <td>${item.amount}</td>
+                    <td>${item.sellerName}</td>
+                    <td>${item.reason}</td>
+                `;
+                otcTable.appendChild(row);
+            });
+            
+            const suppliesTable = document.querySelector('#medical-supplies tbody');
+            suppliesTable.innerHTML = '';
+            data.medicalSupplies.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.item}</td>
+                    <td>${item.purchaseDate}</td>
+                    <td>${item.prescribed}</td>
+                    <td>${item.providerName}</td>
+                    <td>${item.amount}</td>
+                    <td>${item.sellerName}</td>
+                `;
+                suppliesTable.appendChild(row);
+            });
+            
+            const parkingTable = document.querySelector('#parking tbody');
+            parkingTable.innerHTML = '';
+            data.parking.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.address}</td>
+                    <td>${item.date}</td>
+                    <td>${item.amount}</td>
+                    <td>${item.meterUsed}</td>
+                    <td>${item.meterNumber}</td>
+                `;
+                parkingTable.appendChild(row);
+            });
+            
+            const villageTable = document.querySelector('#village-transport tbody');
+            villageTable.innerHTML = '';
+            data.villageTransport.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.date}</td>
+                    <td>${item.providerAddress}</td>
+                    <td>${item.workplaceAddress}</td>
+                    <td>${item.distance}</td>
+                `;
+                villageTable.appendChild(row);
+            });
+            
+            const busTaxiTable = document.querySelector('#bus-taxi tbody');
+            busTaxiTable.innerHTML = '';
+            data.busTaxi.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.date}</td>
+                    <td>${item.startAddress}</td>
+                    <td>${item.destinationAddress}</td>
+                    <td>${item.transportType}</td>
+                    <td>${item.fare}</td>
+                `;
+                busTaxiTable.appendChild(row);
+            });
+        }
+
+        populateForm(formData);
+
+        function toggleData() {
+            const currentData = document.getElementById('claim-number').textContent === formData.claimNumber ? altFormData : formData;
+            populateForm(currentData);
+        }
+
+        const demoButton = document.createElement('button');
+        demoButton.textContent = 'Toggle Data Set';
+        demoButton.style.position = 'fixed';
+        demoButton.style.bottom = '20px';
+        demoButton.style.right = '20px';
+        demoButton.style.padding = '10px';
+        demoButton.style.backgroundColor = '#4CAF50';
+        demoButton.style.color = 'white';
+        demoButton.style.border = 'none';
+        demoButton.style.borderRadius = '4px';
+        demoButton.style.cursor = 'pointer';
+        demoButton.style.zIndex = '1000';
+        demoButton.onclick = toggleData;
+        document.body.appendChild(demoButton);
+    </script>
+</body>
+</html>
